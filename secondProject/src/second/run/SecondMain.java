@@ -1,6 +1,6 @@
-package test;
+package second.run;
 
-public class test {
+public class SecondMain {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
