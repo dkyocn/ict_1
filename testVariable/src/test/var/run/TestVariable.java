@@ -12,8 +12,11 @@ public class TestVariable {
 		VariableSample samp = new VariableSample();
 		
 		// 레퍼런스변수.메서드명();
-//		samp.useVariable();
-//		samp.initVariable();
+		System.out.println("1. 변수 숫자 계산");
+		samp.useVariable();
+		System.out.println("\n2. 변수 초기화");
+		samp.initVariable();
+		System.out.println("\n3. 각 자료형 Wrapper class 크기");
 		samp.testWrapper(); 
 	}
 
