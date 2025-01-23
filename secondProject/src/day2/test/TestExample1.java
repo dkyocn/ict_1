@@ -28,11 +28,13 @@ public class TestExample1 {
 	}
 
 	public void exampleVariable() {
-		String name = "정동주";
+		String name = "정동주"; //문자 나열 값은 반드시 ""로 묶어야 함
 		int age = 27;
+//		short sage = (short)age; //4바이트 크기의 값이 2바이트 크기의 방에 기록될 수 없음, 형변환 필요함
 		double height = 170.1;
-		float weight = 65.1F;
+		float weight = 65.1F; // 실수의 기본 자료형은 double(8byte) -> float(4byte), 값 뒤에 접미사 f 붙임
 		String gender = "M";
+//		char g = 'F'; // 문자하나 타입인 char(character) 는 값에 반드시 '' 사용해야 함
 		String phone = "010-4915-2698";
 		String email = "gioconda77@daum.net";
 		
@@ -50,6 +52,7 @@ public class TestExample1 {
 		gender = sc.next();
 		phone = sc.next();
 		email = sc.next();
+		sc.close();
 		
 		System.out.println("수정된 정보");
 		System.out.println("이름: "+ name + "\n나이: "+ age + "세 \n키: "+ height + "cm\n몸무게: "+ weight + "kg\n성별: "+ gender + "\n전화번호: "+ phone + "\n이메일: "+ email);
