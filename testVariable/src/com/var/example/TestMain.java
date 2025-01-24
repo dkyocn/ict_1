@@ -13,6 +13,9 @@ public class TestMain {
 		
 		System.out.println("\n[연습 3]");
 		exam.example3();
+		
+		System.out.println("\n[연습 4]");
+		exam.inputSungjuk();
 	}
 
 }

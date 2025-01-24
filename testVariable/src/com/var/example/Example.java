@@ -62,9 +62,43 @@ public class Example {
 		if(english.length()<3) {
 			System.out.println("잘못된 입력입니다.");
 		} else {
-			System.out.printf("첫번째 문자: "+english.charAt(0));
+			System.out.printf("첫번째 문자: "+english.charAt(0)); // english.substring(0,1)
 			System.out.printf("두번째 문자: "+english.charAt(1));
 			System.out.printf("세번째 문자: "+english.charAt(2));
 		}
+	}
+	
+	/**
+	 *  학생 이름, 학년, 반, 번호, 성별, 점수를 입력 받아 출력
+	 */
+	
+	public void inputSungjuk() {
+		
+		String name = null;
+		int grade = 0;
+		int school = 0;
+		int num = 0;
+		char gender = '남';
+		double score = 0.0;
+		
+		System.out.printf("이름: ");
+		name = scanner.next();
+		
+		System.out.printf("학년: ");
+		grade = scanner.nextInt();
+		
+		System.out.printf("반: ");
+		school = scanner.nextInt();
+		
+		System.out.printf("번호: ");
+		num = scanner.nextInt();
+		
+		System.out.printf("성별(남/여): ");
+		gender = scanner.next().charAt(0);	
+		
+		System.out.printf("점수(소수점아래 첫째자리까지 입력): ");
+		score = scanner.nextDouble();
+		
+		System.out.printf("%d학년 %d반 %d번 %s %s학생의 점수는 %.1f",grade,school,num,name,gender,score);
 	}
 }
