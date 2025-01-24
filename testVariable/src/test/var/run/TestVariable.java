@@ -21,7 +21,12 @@ public class TestVariable {
 //		samp.initVariable();
 //		System.out.println("\n3. 각 자료형 Wrapper class 크기");
 //		samp.testWrapper();
-//		
+		
+		// final example
+//		samp.testFinal();
+		// literal example
+		samp.testLiteral();
+		
 //		// scanner 샘플
 //		scanEx.testScanner();
 //		// scanner 여러가지 유형
@@ -37,7 +42,7 @@ public class TestVariable {
 //		scanEx.testNextLine2();
 		
 		// 연습문제
-		scanEx.inputPractice();
+//		scanEx.inputPractice();
 	}
 
 }

@@ -102,4 +102,56 @@ public class VariableSample {
 		System.out.println("char 최소값 : "+(double)Character.MIN_VALUE);
 
 	}
+	
+	// final 예약어 사용 테스트
+	// final 은 클래스에 사용 가능: public final class 클래스명() => 상속에 사용 못하는 클래스
+	// final 은 맴버변수(field)에 사용 가능: public final 자료형 변수명 = 초기값; => 값 변경 못함
+	// final 은 맴버 변수(Method)에 사용 가능: public final 변환자료형 메서드명(자료형, 매개변수, ....){소스 코드} => 오버라이딩 못함
+	// final 은 지역변수(local Variable)에 사용 가능: final 자료형 변수명 = 초기값; => 값 변경 못함
+	public void testFinal() {
+		
+		// 지역 변수(local variable): 메서드 안에서 선언한 변수
+		int num = 12;
+		final int value = 100; // 값 변경 불가
+		
+		System.out.println("num: "+num);
+		System.out.println("value: "+value);
+		
+		num = 13;
+//		value = 200; // -> error
+		
+		System.out.println("num: "+num);
+		System.out.println("value: "+value);
+	}
+	
+	// 리터럴(literal) : 소스코드에서 사용되는 실제 값
+	public void testLiteral() {
+		String name = "홍길동";
+		int age = 27;
+		double pay = 695.95;
+		char gender = '남';
+		
+		System.out.println(name+", "+age+", "+pay+", "+gender);
+		
+		// 정수 값은 10진수, 8진수, 16진수
+		int decimalNum = 12; //10진수 12
+		int octalNum = 023; // 8진수 23
+		int hexaNum = 0xf7; // 16진수 f7 
+		
+		System.out.println("decimalNum: "+decimalNum);
+		System.out.println("octalNum: "+octalNum);
+		System.out.println("hexaNum: "+hexaNum);
+		
+		int number = 345;
+		System.out.printf("8진수: %o",number);
+		System.out.printf("\n10진수: %d",number);
+		System.out.printf("\n16진수: %x",number);
+		// printf (print format) : format을 이용하는 print 메서드 
+		
+		double dnum = 1.234; // floating (부동소수점형 표기) == 비과학용 표기식이라고도 함
+		double dnum2 = 1.2345e3; // scientific (과학용 표기) == 지수형 표기라고도 함
+		
+		System.out.printf("\ndnum: %.2f, %g, %e,%a, dnum2: %e", dnum,dnum,dnum,dnum, dnum2);
+		
+	}
 }
