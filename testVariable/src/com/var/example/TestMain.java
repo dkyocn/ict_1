@@ -3,8 +3,19 @@ package com.var.example;
 public class TestMain {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		Example exam = new Example();
+		
+		System.out.println("[연습 1]");
+		exam.example1();
 
+		System.out.println("\n[연습 2]");
+		exam.example2();
+		
+		System.out.println("\n[연습 3]");
+		exam.example3();
+		
+		System.out.println("\n[연습 4]");
+		exam.inputSungjuk();
 	}
 
 }
