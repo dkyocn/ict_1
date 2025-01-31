@@ -46,7 +46,16 @@ public class TestOperator {
 //		assignmentOperator.testArithmeticAssign();
 		
 		// 비트연산자
-		bitOperator.testBit();
+//		bitOperator.testBit();
+		
+		// test
+//		samp.testComma();
+		
+		// 일반논리연산자 특징
+//		samp.testLogical();
+		
+		// random
+		samp.testRandom();
 		
 	}
 

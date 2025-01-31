@@ -46,7 +46,7 @@ public class BitOperator {
 		printBit(a);
 		printBit(b);
 		System.out.println("----------------------------------------------");
-		printBit(a & b); // 두 정수의 최소공배수 구함
+		printBit(a & b); // 두 정수의 최대공약수 구함
 		printBit(a ^ b); // 두 비트가 다르면 1, 같으면 0 
 		printBit(a | b);
 	}
