@@ -88,7 +88,7 @@ public class Example {
 		int num = 0;
 		String even = "";
 		
-		System.out.printf("양수 입력: ");
+		System.out.printf("정수 입력: ");
 		num = scan.nextInt();
 		
 		even = num % 2 == 0 ? "짝수다" : "홀수다";
