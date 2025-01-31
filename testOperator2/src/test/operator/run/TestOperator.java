@@ -1,6 +1,7 @@
 package test.operator.run;
 
 import test.operator.sample.AssignmentOperator;
+import test.operator.sample.BitOperator;
 import test.operator.sample.OperatorSample;
 import test.operator.sample.TernaryOperator;
 
@@ -17,6 +18,7 @@ public class TestOperator {
 		
 		TernaryOperator tenaryOperator = new TernaryOperator();
 		AssignmentOperator assignmentOperator = new AssignmentOperator();
+		BitOperator bitOperator = new BitOperator();
 		
 		// 절대 값 출력
 //		tenaryOperator.testAbs();
@@ -41,7 +43,11 @@ public class TestOperator {
 //		assignmentOperator.testAssignment();
 		
 		// 산술연산자
-		assignmentOperator.testArithmeticAssign();
+//		assignmentOperator.testArithmeticAssign();
+		
+		// 비트연산자
+		bitOperator.testBit();
+		
 	}
 
 }
