@@ -3,6 +3,7 @@ package logic.run;
 import logic.testIf.sample.IfElseSample;
 import logic.testIf.sample.IfSample;
 import logic.testIf.sample.MultiIfSample;
+import logic.testswitch.sample.SwitchSample;
 
 public class TestMain {
 
@@ -14,6 +15,7 @@ public class TestMain {
 		IfSample ifSample = new IfSample();
 		IfElseSample ifElseSample = new IfElseSample();
 		MultiIfSample multiIfSample = new MultiIfSample();
+		SwitchSample switchSample = new SwitchSample();
 		
 		// 레퍼런스변수.메서드명([매개변수에게 전달할 값, ....]);
 //		ifSample.testGugudan();
@@ -31,7 +33,12 @@ public class TestMain {
 //		multiIfSample.checkThreeMax();
 //		multiIfSample.scoreToGrade();
 //		multiIfSample.checkChar();
-		multiIfSample.checkChar2();
+//		multiIfSample.checkChar2();
+//		multiIfSample.isGrateOrEquals();
+		
+//		switchSample.printMessage();
+//		switchSample.simpleCalculator();
+		switchSample.priceCalculator();
 	}
 
 }

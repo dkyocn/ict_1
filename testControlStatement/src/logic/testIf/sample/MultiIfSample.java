@@ -139,7 +139,7 @@ public class MultiIfSample {
 			result = "upper";
 		} else if (Character.isLowerCase(temp)) {
 			result = "lower";
-		} else  if (isHangul(temp)) {
+		} else  if (isHangul(temp)) { // 같은 클래스 안의 메서드 사용 : 메서드명(전달값)
 			result = "korea";
 		} else if (Character.isDigit(temp) ) {
 			result = "numeric";
@@ -152,9 +152,35 @@ public class MultiIfSample {
 	}
 	
 	// 매개변수도 있고 반환값도 있는 메서드
+	// private (비공개) : 클래스 안에서만 사용할 수 있음
+	// isHangul 메서드는 문자 하나를 전달 받아서, 메서드가 처리한 결과로 boolean 자료형 값 하나를 리턴하는 메서드이다.
 	private boolean isHangul(char ch) { 
 		// 한글의 유니코드 범위
 		// 첫 번째 조건 한글 완성형 (가~ 힣), 두 번째 조건 한글 개별 자음 모음(초성, 중성, 종성), 세 번째 조건 한글 호환 자음 모음(ㄱ ~ ㅣ), 네 번째 한글 확장 자음 모음 A, 다섯 번째 한글 확장 자음 모음 B
 		return (ch >= 0xAC00 && ch <= 0xD7A3 || ch >= 0x1100 && ch <= 0x11FF
-			|| ch >= 0x3130 && ch <= 0x318F || ch >= 0xA960 && ch <= 0xA97F || ch >= 0xD7B0 && ch <= 0xD7FF);}
+			|| ch >= 0x3130 && ch <= 0x318F || ch >= 0xA960 && ch <= 0xA97F || ch >= 0xD7B0 && ch <= 0xD7FF);
+		}
+	
+	/**
+	 * 두 개의 정수를 입력받아, 두 수(A,B)를 비교한 후
+	 * 어떤 수가 큰지 혹은 같은지 비교
+	 */
+	public void isGrateOrEquals() {
+		
+		int first = 0;
+		int second = 0;
+		
+		System.out.printf("첫 번째 정수 입력: ");
+		first = scan.nextInt();
+		System.out.printf("첫 번째 정수 입력: ");
+		second = scan.nextInt();
+		
+		if (first > second) {
+			System.out.println(first+"가(이) "+second+"보다 크다.");
+		} else  if (first < second) {
+			System.out.println(second+"가(이) "+first+"보다 크다.");
+		} else {
+			System.out.println(first+"와(과) "+second+"는 같다.");
+		}
+	}
 }
