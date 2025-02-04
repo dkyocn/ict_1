@@ -91,13 +91,6 @@ ict인재개발원 프로그램
 |protected|필드,생성자,메서드|자식 클래스가 아닌 다른 패키지에 소속된 클래스|
 |default|클래스,필드,생성자,메서드|다른 패키지에 소속된 클래스|
 |private|필드,생성자,메서드|모든 클래스|
-### if 문
-<pre><code>
-if(조건) {
-  [true 일 때 실행 코드]
-} else {
-  [false 일 때 실행 코드]
-}</code></pre>
 ### 대입연산자
 - 순수대입연산자 : =
 - 복합대입연산자
@@ -119,3 +112,33 @@ if(조건) {
   - 원하는 범위의 정수 : (int)(Math.random() * 끝값) + 시작값
 - java.util.Random
   - 원하는 범위의 정수 : random.nextInt(원하는 범위의 정수)
+---
+## 6일차
+### 제어문
+#### if 문
+> if문 뒤에 실행할 코드가 한줄이면 {} 생략 가능
+<pre><code>
+// if - else 문
+if(조건) {
+  [true 일 때 실행 코드]
+} else {
+  [false 일 때 실행 코드]
+
+// if - else if - else 문
+if(조건1) {
+  [조건1이 true 일 때 실행 코드]
+} else if(조건2){
+  [조건2가 true 일 때 실행 코드]
+} else {
+    [전부 false 일 때 실행 코드]
+}</code></pre>
+#### switch 문
+> 판단 기준 부분에는 조건식 불가\
+> break; 사용해야 switch 문 종료
+<pre><code>
+switch(판단기준) {
+  case 값:
+    [실행 코드]
+    break;
+}
+</code></pre>
