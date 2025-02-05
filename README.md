@@ -114,7 +114,7 @@ ict인재개발원 프로그램
   - 원하는 범위의 정수 : random.nextInt(원하는 범위의 정수)
 ---
 ## 6일차
-### 제어문
+### 제어문 1
 #### if 문
 > if문 뒤에 실행할 코드가 한줄이면 {} 생략 가능
 <pre><code>
@@ -141,4 +141,35 @@ switch(판단기준) {
     [실행 코드]
     break;
 }
+</code></pre>
+## 7일차
+### 제어문 2
+#### for 문
+<pre><code>
+// for 문
+for(초기식; 조건식; 증감식) {
+  반복 실행 할 코드
+}
+
+// 다중 for 문
+for(초기식; 조건식; 증감식) {
+  for(초기식; 조건식; 증감식) {
+    반복 실행 할 코드
+  }
+}
+</code></pre>
+#### while 문 / do-while 문
+> while문과 do-while문은 while()이 true일 동안에 계속 loop됨\
+> break 사용시 while문 강제 종료됨\
+> 두 구문의 차이 조건이 맞는지 체크하는 시점의 차이이다.
+<pre><code>
+// while 문
+while(조건) {
+  반복 실행 할 코드
+}
+
+// do - while 문
+do {
+  반복 실행 할 코드
+} while(조건)
 </code></pre>
