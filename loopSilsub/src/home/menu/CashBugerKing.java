@@ -12,6 +12,7 @@ public class CashBugerKing {
 
 		int num = 0;
 		String out = "y";
+		String order = "";
 
 		int count = 0;
 		int price = 0;
@@ -34,7 +35,8 @@ public class CashBugerKing {
 				System.out.printf("수량은? ");
 				count = scan.nextInt();
 				price += priceCalculator("불고기버거", count);
-				bugger.put("불고기버거", count);
+//				bugger.put("불고기버거", count);
+				order += "불고기 버거 : "+count+"개 - "+price+"원\n";
 				System.out.println(count + "개 주문하셨습니다.");
 				break;
 			case 2:
@@ -43,6 +45,7 @@ public class CashBugerKing {
 				count = scan.nextInt();
 				price += priceCalculator("치킨버거", count);
 				bugger.put("치킨버거", count);
+				order += "치킨버거 : "+count+"개 - "+price+"원\n";
 				System.out.println(count + "개 주문하셨습니다.");
 				break;
 			case 3:
@@ -51,6 +54,7 @@ public class CashBugerKing {
 				count = scan.nextInt();
 				price += priceCalculator("감자튀김", count);
 				bugger.put("감자튀김", count);
+				order += "감자튀김 : "+count+"개 - "+price+"원\n";
 				System.out.println(count + "개 주문하셨습니다.");
 				break;
 			case 4:
@@ -59,6 +63,7 @@ public class CashBugerKing {
 				count = scan.nextInt();
 				price += priceCalculator("치즈스틱", count);
 				bugger.put("치즈스틱", count);
+				order += "치즈스틱 : "+count+"개 - "+price+"원\n";
 				System.out.println(count + "개 주문하셨습니다.");
 				break;
 			case 5:
@@ -67,6 +72,7 @@ public class CashBugerKing {
 				count = scan.nextInt();
 				price += priceCalculator("샐러드", count);
 				bugger.put("샐러드", count);
+				order += "샐러드 : "+count+"개 - "+price+"원\n";
 				System.out.println(count + "개 주문하셨습니다.");
 				break;
 			case 6:
@@ -75,6 +81,7 @@ public class CashBugerKing {
 				count = scan.nextInt();
 				price += priceCalculator("콜라", count);
 				bugger.put("콜라", count);
+				order += "콜라 : "+count+"개 - "+price+"원\n";
 				System.out.println(count + "개 주문하셨습니다.");
 				break;
 			case 7:
@@ -83,6 +90,7 @@ public class CashBugerKing {
 				count = scan.nextInt();
 				price += priceCalculator("에이드", count);
 				bugger.put("에이드", count);
+				order += "에이드 : "+count+"개 - "+price+"원\n";
 				System.out.println(count + "개 주문하셨습니다.");
 				break;
 			case 8:
@@ -91,6 +99,7 @@ public class CashBugerKing {
 				count = scan.nextInt();
 				price += priceCalculator("커피", count);
 				bugger.put("커피", count);
+				order += "커피 : "+count+"개 - "+price+"원\n";
 				System.out.println(count + "개 주문하셨습니다.");
 				break;
 			}
