@@ -85,7 +85,7 @@ public class WhileSample {
 
 		}
 
-		System.err.println("5의 배수를 뺀 1 ~ 100가지의 합: " + sum);
+		System.out.println("5의 배수를 뺀 1 ~ 100가지의 합: " + sum);
 	}
 
 	public void testContinue2() {
