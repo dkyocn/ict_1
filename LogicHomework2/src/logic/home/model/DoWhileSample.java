@@ -46,13 +46,16 @@ public class DoWhileSample {
 		String order = "";
 
 		int count = 0;
-		int price = 0;
+		int sum = 0;
 
 		do {
-System.out.println("check: " + price);
 			
-			System.out.println("*** 메뉴를 선택하세요 ***\n" + "\n" + "햄버거 ***************\n" + "1. 불고기버거	3500원\n"
-					+ "2. 치킨버거		3200원\n" + "추가 ****************\n" + "3. 감자튀김		1000원\n" + "4. 치즈스틱		400원\n"
+			int price = 0;
+			
+			System.out.println("*** 메뉴를 선택하세요 ***\n" + "\n" + "햄버거 ***************\n" 
+			+ "1. 불고기버거	3500원\n"
+					+ "2. 치킨버거		3200원\n" + "추가 ****************\n" 
+			+ "3. 감자튀김		1000원\n" + "4. 치즈스틱		400원\n"
 					+ "5. 샐러드		2000원\n" + "음료수 ***************\n" + "6. 콜라		700원\n" + "7. 에이드		1200원\n"
 					+ "8. 커피		1000원\n" + "********************\n");
 			System.out.printf("메뉴 선택: ");
@@ -66,6 +69,7 @@ System.out.println("check: " + price);
 				price += priceCalculator("불고기버거", count);
 				order += "불고기 버거 : "+count+"개 - "+price+"원\n";
 				System.out.println(count + "개 주문하셨습니다.");
+				sum += price;
 				break;
 			case 2:
 				System.out.println("치킨버거를 선택하셨습니다.");
@@ -74,6 +78,7 @@ System.out.println("check: " + price);
 				price += priceCalculator("치킨버거", count);
 				order += "치킨버거 : "+count+"개 - "+price+"원\n";
 				System.out.println(count + "개 주문하셨습니다.");
+				sum += price;
 				break;
 			case 3:
 				System.out.println("감자튀김을 선택하셨습니다.");
@@ -82,6 +87,7 @@ System.out.println("check: " + price);
 				price += priceCalculator("감자튀김", count);
 				order += "감자튀김 : "+count+"개 - "+price+"원\n";
 				System.out.println(count + "개 주문하셨습니다.");
+				sum += price;
 				break;
 			case 4:
 				System.out.println("치즈스틱을 선택하셨습니다.");
@@ -90,6 +96,7 @@ System.out.println("check: " + price);
 				price += priceCalculator("치즈스틱", count);
 				order += "치즈스틱 : "+count+"개 - "+price+"원\n";
 				System.out.println(count + "개 주문하셨습니다.");
+				sum += price;
 				break;
 			case 5:
 				System.out.println("샐러드를 선택하셨습니다.");
@@ -98,6 +105,7 @@ System.out.println("check: " + price);
 				price += priceCalculator("샐러드", count);
 				order += "샐러드 : "+count+"개 - "+price+"원\n";
 				System.out.println(count + "개 주문하셨습니다.");
+				sum += price;
 				break;
 			case 6:
 				System.out.println("콜라를 선택하셨습니다.");
@@ -106,6 +114,7 @@ System.out.println("check: " + price);
 				price += priceCalculator("콜라", count);
 				order += "콜라 : "+count+"개 - "+price+"원\n";
 				System.out.println(count + "개 주문하셨습니다.");
+				sum += price;
 				break;
 			case 7:
 				System.out.println("에이드를 선택하셨습니다.");
@@ -114,6 +123,7 @@ System.out.println("check: " + price);
 				price += priceCalculator("에이드", count);
 				order += "에이드 : "+count+"개 - "+price+"원\n";
 				System.out.println(count + "개 주문하셨습니다.");
+				sum += price;
 				break;
 			case 8:
 				System.out.println("커피를 선택하셨습니다.");
@@ -122,6 +132,7 @@ System.out.println("check: " + price);
 				price += priceCalculator("커피", count);
 				order += "커피 : "+count+"개 - "+price+"원\n";
 				System.out.println(count + "개 주문하셨습니다.");
+				sum += price;
 				break;
 			}
 			
@@ -132,7 +143,7 @@ System.out.println("check: " + price);
 		System.out.println("---------------------------");
 		System.out.println(order);
 		System.out.println("---------------------------");
-		System.out.println("총 가격: "+price);
+		System.out.println("총 가격: "+sum);
 		} while (out.equals("y"));
 
 			

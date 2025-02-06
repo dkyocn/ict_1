@@ -14,8 +14,9 @@ public class TestTwoArray {
 //		twoDimensionArraySample.sample3();
 //		twoDimensionArraySample.sample4();
 		
-//		sample.munjae1();
-		sample.munjae2();
+		sample.munjae1();
+//		sample.munjae2();
+//		sample.munjae3();
 
 	}
 

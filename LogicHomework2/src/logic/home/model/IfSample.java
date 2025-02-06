@@ -184,7 +184,7 @@ public class IfSample {
 			result = "영어 대문자";
 		} else if (temp >='a' && temp <='z') {
 			result = "영어 소문자";
-		} else if (temp >=0 && temp <=9 ) {
+		} else if (temp >='0' && temp <='9' ) {
 			result = "숫자";
 		} else {
 			result = "기타 문자";

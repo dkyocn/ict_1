@@ -38,21 +38,22 @@ public class NonStaticMethodSample {
 		System.out.printf("char에 저장할 값 입력: ");
 		ch = scanner.next().charAt(0);
 		
-		System.out.println("String에 저장된 값: "+str+", int에 저장된 값: "+num+", float에 저장된 값: "+floatNum+"double에 저장된 값: "+doubleNum+
-				"long에 저장된 값: "+longNum+"short에 저장된 값: "+sh+"char에 저장된 값: "+ch);
+		System.out.println("String에 저장된 값: "+str+", int에 저장된 값: "+num+", float에 저장된 값: "+floatNum+", double에 저장된 값: "+doubleNum+
+				", long에 저장된 값: "+longNum+", short에 저장된 값: "+sh+", char에 저장된 값: "+ch);
 		
 	}
 
 	// Date 클래스 사용 : 오늘 날짜, 현재 시간 정보 출력하기
 	public void testDate() {
 		
-		
-		
 		System.out.println("오늘 날짜: "+(date.getMonth()+1)+"월 "+ date.getDate()+"일, 현재 시간: "+ date.getHours()+"시 "+date.getMinutes()+"분 "+date.getSeconds()+"초");
 	}
 
 	// Random 클래스 사용 : 정수와 실수에 대한 난수 출력하기
 	public void testRandom() {
+		
+		System.out.println("정수 난수 값 : "+random.nextInt());
+		System.out.println("실수 난수 값 : "+random.nextDouble());
 	}
 
 }

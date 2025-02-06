@@ -31,9 +31,9 @@ public class BreakSample {
 		
 		for (int i = 1; i<10; i++) {
 			System.out.println("구구단 "+i+" 단");
-			for(int j = 1;  i<10; j++) {
+			loop : for(int j = 1;  i<10; j++) {
 				if(j == 5) {
-					break;
+					break loop;
 				}
 				System.out.println(i+" * "+j+"  = "+(i*j));
 			}

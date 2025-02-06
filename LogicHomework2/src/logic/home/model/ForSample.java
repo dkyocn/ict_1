@@ -27,9 +27,8 @@ public class ForSample {
 
 		for(int i = 0; i <= 100; i+=2) {
 			sum += i; // 100번 수행됨
-
-			System.out.println("1 ~ 100까지 짝수들의 합: "+ sum);
 		}
+		System.out.println("1 ~ 100까지 짝수들의 합: "+ sum);
 	}
 
 	// 정수 하나 입력받아, 그 수의 구구단 출력하기
@@ -142,9 +141,11 @@ public class ForSample {
 	public void guguDan() {
 		
 		for(int i = 2; i<10; i++) {
+			System.out.println("구구단 "+i+"단");
 			for(int j = 1; j<=9; j++) {
 				System.out.println(i+" * "+ j+" = "+(i*j));
 			}
+			System.out.println();
 		}
 		
 	}

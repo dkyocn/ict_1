@@ -30,7 +30,7 @@ public class WhileSample {
 		int i = 0;
 		int sum = 0;
 		
-		while(i<100) {
+		while(i<101) {
 			sum +=i;
 			i++;
 		}
@@ -81,7 +81,7 @@ public class WhileSample {
 		while (!temp.equals("exit")) { // 문자열은 클래스이므로 같으냐를 물을 때 '==' 사용할 수 없음 , == 연산자 : 값 == 값 비교
 			System.out.println(temp + " 글자 개수: " + temp.length());
 
-			System.out.printf("문자열 입력: ");
+			System.out.printf("문자열 입력(exit 종료): ");
 			temp = scanner.next();
 		}
 	}
