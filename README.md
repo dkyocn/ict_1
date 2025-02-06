@@ -189,3 +189,31 @@ do {
   - int -> 0
   - String -> null
   - boolean -> false
+---
+## 9일차
+### 배열
+#### 다차원 배열
+- 2차원 배열 선언 방법
+  - 자료형[][] 배열명;
+  - 자료형 []배열명[];
+  - 자료형 배열명[][];
+- 2차원배열.length -> 행 개수
+- 2차원배열[i].length -> 열 개수
+> **2차원 배열 생성 시 열의 개수가 각각 다른 가변 배열 생성 가능!!**
+#### 정렬
+> 정렬 방식
+>> select, bubble, insert, quick, mearge, radix, dual-pivot
+<pre><code>
+// select(이진탐색) / 오름차순
+	public void sortAscending(int[] arr) {
+		
+		for(int step = 0; step < arr.length; step++) { // 각 단계별 반복, 값을 정할 기준 위치
+			for(int i = step+ 1; i<arr.length; i++) { // 값을 비교하는 반복
+				if(arr[step]>arr[i]) { // 앞자리의 값이 크면 두 값을 교환
+					swap(arr, step, i); // 작은 값을 계속 앞으로 보내는 방식
+				}
+				
+			}
+		}
+	}
+</code></pre>
