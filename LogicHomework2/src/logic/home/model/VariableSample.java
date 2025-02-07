@@ -24,7 +24,7 @@ public class VariableSample {
 		System.out.printf("성격: ");
 		personality = scanner.next();
 		
-		System.out.println("[신상정보]");
+		System.out.println("\n[신상정보]");
 		System.out.println("이름: "+name+"\n나이: "+age+"\n성별: "+gender+"\n성격: "+personality);
 	}
 
@@ -57,7 +57,7 @@ public class VariableSample {
 		System.out.printf("급여 입력: ");
 		money = scanner.nextInt();
 		
-		System.out.println("우리회사 사원 정보");
+		System.out.println("\n우리회사 사원 정보");
 		System.out.println("소속: "+ group+", 직책: "+position+", 이름: "+name+", 나이: "+age+", 성별: "+gender+", 이메일: "+email+", 전화번호: "+phone+", 급여: "+money);
 		
 		
