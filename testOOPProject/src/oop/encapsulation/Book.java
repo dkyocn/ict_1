@@ -65,4 +65,25 @@ public class Book {
 		this.discount = discount;
 	}
 
+	// Getter
+	public String getTitle() {
+		return this.title;
+	}
+
+	public String getAuthor() {
+		return this.author;
+	}
+
+	public String getPublisher() {
+		return this.publisher;
+	}
+
+	public int getPrice() {
+		return this.price;
+	}
+
+	public double getDiscount() {
+		return this.discount;
+	}
+
 }

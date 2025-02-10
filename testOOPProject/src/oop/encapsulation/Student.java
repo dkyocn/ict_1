@@ -69,7 +69,7 @@ public class Student {
 		}
 	}
 
-	public Student(int sno, String sname, String major, double score, String grade, int rank) throws Exception {
+	public Student(int sno, String sname, String major, double score, String grade, int rank) {
 		this.sno = sno;
 		this.sname = sname;
 		this.major = major;
@@ -77,18 +77,18 @@ public class Student {
 		this.grade = grade;
 		this.rank = rank;
 
-		count++;
-		System.out.println("현재 할당된 객체 개수: " + count);
-
-		if (count == MAX) {
-			// 최대 객체 할당 개수가 다 사용되었다면 에러 발생시킴
-			//			throw new IllegalArgumentException("최대 할당 개수를 다 소진하였습니다. 더 이상 객체 생성할 수 없습니다.");
-			throw new Exception("최대 할당 개수를 다 소진하였습니다. 더 이상 객체 생성할 수 없습니다.");
-		}
+		//		count++;
+		//		System.out.println("현재 할당된 객체 개수: " + count);
+		//
+		//		if (count == MAX) {
+		//			// 최대 객체 할당 개수가 다 사용되었다면 에러 발생시킴
+		//			//			throw new IllegalArgumentException("최대 할당 개수를 다 소진하였습니다. 더 이상 객체 생성할 수 없습니다.");
+		//			throw new Exception("최대 할당 개수를 다 소진하였습니다. 더 이상 객체 생성할 수 없습니다.");
+		//		}
 	}
 
 	public void displayStudent() {
-		System.out.println("현재 할당된 객체 개수: " + count);
+		//		System.out.println("현재 할당된 객체 개수: " + count);
 		System.out.printf("%d, %s, %s, %.1f, %s, %d\n", this.sno, this.sname, this.major, this.score, this.grade,
 			this.rank);
 	}
@@ -119,5 +119,30 @@ public class Student {
 
 	public void setRank(int rank) {
 		this.rank = rank;
+	}
+
+	// Getter
+	public int getSno() {
+		return this.sno;
+	}
+
+	public String getSName() {
+		return this.sname;
+	}
+
+	public String getMajor() {
+		return this.major;
+	}
+
+	public double getScore() {
+		return this.score;
+	}
+
+	public String getGrade() {
+		return this.grade;
+	}
+
+	public int getRank() {
+		return this.rank;
 	}
 }
