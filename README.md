@@ -217,3 +217,48 @@ do {
 		}
 	}
 </code></pre>
+---
+## 10일차
+### 객체지향프로그래밍(OOP)
+#### OOP의 3대 특징
+- 캡슐화
+- 상속
+- 다형성
+#### 클래스 용도
+- 실행용 클래스 : main() 메서드 포함
+- 기능 제공용 클래스 : 주로 메서드로만 구성됨
+- 데이터 저장용 클래스 : vo(value object), do(domain object), dto(data transfer object) 로 표현(캡슐화)
+#### 필드 선언
+<pre><code>
+// 기본
+private String sname;
+private String major;
+private double score;
+private String grade;
+private int rank;
+// 정적
+private static int count;
+// 상수
+public static final int MAX = 5; // 생성할 수 있는 최대 객체 수
+</code></pre>
+#### OverLoading(오버로딩)
+> 오버로딩(중복 작성)의 조건 : 매개변수가 달라야 함(개수, 자료형 )
+<pre><code>
+// 기본 생성자
+public Student() {}
+// 오버로딩한 생성자
+public Student(int sno, String sname) {
+	// 전달 값은 필드 초기화에 사용됨
+	// 필드 명 = 전달 값;
+	this.sno = sno;
+}
+// 오버로딩한 생성자 2
+public Student(int sno, String sname, String major, double score, String grade, int rank) {
+	this.sno = sno;
+	this.sname = sname;
+	this.major = major;
+	this.score = score;
+	this.grade = grade;
+	this.rank = rank;
+}
+</code></pre>

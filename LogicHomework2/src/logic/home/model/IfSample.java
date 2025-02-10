@@ -18,7 +18,7 @@ public class IfSample {
 		num2 = scanner.nextInt();
 		
 		if (num1 > num2) {
-			System.out.println("입력하신 두 수 중 큰 수는 "+num1+" 입니다.");
+			System.out.println("입력하신 두 수 중 큰 수는 "+num1+" 입니다.\n");
 		} else {
 			System.out.println("입력하신 두 수 중 큰 수는 "+num2+" 입니다.");
 		}
