@@ -74,5 +74,5 @@ public class Member {
 		return "아이디: " + this.id + ", 이름: " + this.name + ", 패스워드: " + this.password + ", 이메일: " + this.email + ", 성별: "
 			+ this.gender + ", 나이: " + this.age;
 	}
-
+	
 }
