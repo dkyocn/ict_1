@@ -262,3 +262,34 @@ public Student(int sno, String sname, String major, double score, String grade, 
 	this.rank = rank;
 }
 </code></pre>
+---
+## 11일차
+### 객체지향프로그래밍(OOP)
+> 접근제한자 설계 시 기호
+> - public +
+> - default ~
+> - protected #
+> - private -
+#### Getter 와 Setter 
+> **Setter**
+> - 객체 안의 필드(인스턴스변수)의 값 변경하는 메서드
+<pre><code>
+// setter 생성 예
+public void setName(String name) {
+	this.name = name; // 여기서 this.name은 필드에 선언되어 힙메모리에 저장된 변수
+}
+// setter 사용 예
+School school = new School(); // 생성자 주입
+school.setName("카일"); 
+</code></pre>
+> **Getter**
+> - 필드에 기록된 값을 읽어서, 요구하는 쪽으로 넘기는 메소드
+<pre><code>
+// getter 생성 예
+public String getName() {
+	return this.name;
+}
+// Getter 사용 예
+School school = new School(); // 생성자 주입
+String name = school.getName(); 
+</code></pre>
