@@ -219,7 +219,7 @@ do {
 </code></pre>
 ---
 ## 10일차
-### 객체지향프로그래밍(OOP)
+### 객체지향프로그래밍(OOP) - 1
 #### OOP의 3대 특징
 - 캡슐화
 - 상속
@@ -264,7 +264,7 @@ public Student(int sno, String sname, String major, double score, String grade, 
 </code></pre>
 ---
 ## 11일차
-### 객체지향프로그래밍(OOP)
+### 객체지향프로그래밍(OOP) - 2
 > 접근제한자 설계 시 기호
 > - public +
 > - default ~
@@ -292,4 +292,46 @@ public String getName() {
 // Getter 사용 예
 School school = new School(); // 생성자 주입
 String name = school.getName(); 
+</code></pre>
+---
+## 12일차
+### 객체지향프로그래밍(OOP) - 3
+#### 큐와 스택
+- 큐 - FIFO
+- 스택 - LIFO
+#### 객체 배열
+- **객체 배열 초기화**
+  - 객체[] 변수명 = new 객체[배열 크기];
+  - 객체[] 변수명 = {new 객체, new 객체, ....};
+#### static Getter & Setter
+<pre><code>
+// setter
+public static void setBookcount(int bookCount) {
+	// static 메서드 안에는 this 레퍼런스 없음
+	Book.bookCount = bookCount; // 파라메터와 지역변수의 이름이 다를 시 Book. 없이 바로 저장 가능
+}
+// getter
+public static int getBookCount() {
+	return bookCount;
+}
+</code></pre>
+#### 초기화 블럭
+<pre><code>
+public class BookManager {	
+	private Book[] bar;
+	Scanner sc;
+	private static int count; 
+	
+	// 생성자보다 먼저 실행됨
+	{
+		bar = new Book[10];
+		new Scanner(System.in);	
+	}
+	
+	// static 필드 초기화 블럭
+	static {
+		count = 0;
+	}
+}
+
 </code></pre>
