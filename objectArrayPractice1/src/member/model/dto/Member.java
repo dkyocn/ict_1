@@ -13,6 +13,13 @@ public class Member {
 
 	}
 
+	public Member(String id, String name, int age, char gender) {
+		this.age = age;
+		this.id = id;
+		this.name = name;
+		this.gender = gender;
+	}
+
 	public Member(String id, String name, String password, String email, char gender, int age) {
 		this.id = id;
 		this.name = name;
@@ -74,5 +81,5 @@ public class Member {
 		return "아이디: " + this.id + ", 이름: " + this.name + ", 패스워드: " + this.password + ", 이메일: " + this.email + ", 성별: "
 			+ this.gender + ", 나이: " + this.age;
 	}
-	
+
 }
