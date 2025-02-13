@@ -37,7 +37,7 @@ public class NonStaticSample {
 	// 배열의 값 들을 내림차순 정렬 처리함
 	public void sortDescending(int[] intArr) {
 		for (int i = 0; i < intArr.length; i++) {
-			for (int j = 1; j < intArr.length; j++) {
+			for (int j = 0; j < intArr.length; j++) {
 				if (intArr[i] > intArr[j]) {
 					swap(intArr, j, i);
 				}
@@ -49,9 +49,9 @@ public class NonStaticSample {
 	// 처리할 내용 : swap 메소드를 이용하여 배열의 값들을 오름차순 정렬함
 	public void sortAscending(int[] intArr) {
 		for (int i = 0; i < intArr.length; i++) {
-			for (int j = 1; j < intArr.length; j++) {
-				if (intArr[i] > intArr[j]) {
-					swap(intArr, i, j);
+			for (int j = 0; j < intArr.length; j++) {
+				if (intArr[i] < intArr[j]) {
+					swap(intArr, j, i);
 				}
 			}
 		}
@@ -60,32 +60,35 @@ public class NonStaticSample {
 	// 문자열과 문자 하나를 전달받아, 문자열에 포함된 문자의 갯수를 리턴하는 메소드
 	public int countChar(String str, char ch) {
 		int result = 0;
-		if(str.indexOf(ch) >=0 ) {
-			result++;
+		for (int i = 0; i < str.length(); i++) {
+			if (pCharAt(str, i) == ch) {
+				result++;
+			}
 		}
+
 		return result;
 	}
 
 	// 정수 두 개를 전달받아, 두 수중 작은 값에서 큰 값사이의 정수들의 합계를 구해서 리턴하는 메서드
 	public int totalValue(int num1, int num2) {
 		int sum = 0;
-		
-		if(num1 < num2) {
-			for(int i = num1; i<num2+1;i++) {
+
+		if (num1 < num2) {
+			for (int i = num1; i < num2 + 1; i++) {
 				sum += i;
 			}
-		} else if(num1 > num2) {
-			for(int i = num2; i<num1+1;i++) {
+		} else if (num1 > num2) {
+			for (int i = num2; i < num1 + 1; i++) {
 				sum += i;
 			}
 		}
-		
+
 		return sum;
 	}
 
 	// 문자열과 인덱스를 전달받아, 그 위치의 문자를 리턴하는 메소드
 	public char pCharAt(String str, int index) {
-		
+
 		return str.charAt(index);
 	}
 
