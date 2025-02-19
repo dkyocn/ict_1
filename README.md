@@ -367,3 +367,56 @@ public class BookManager {
 > **부모 클래스 타입의 레퍼런스가 후손객체의 주소를 받을 수 있다.**
 - ex) AA가 BB의 부모클래스 일 때 AA aob = new BB(); -> 자동으로 AA클래스 형으로 형변환 됨
 - 부모 클래스 타입을 후손 클래스 타입으로 바꾸는 것은 자동 처리가 되지 않음
+---
+## 16일차
+### 추상(abstract) 클래스와  interface
+#### 추상(abstract) 클래스
+> - 클래스 내에 abstract 클래스가 하나라도 존재하면 해당 클래스 abstract 클래스로 생성해야 함
+> - 자손 클래스에서는 부모 클래스의 abstract 클래스를 전부 오버라이딩 해야 하며\
+> 접근제한자를 반드시 따라가야함
+<pre><code>
+// abstract 클래스(부모 클래스)
+public abstract class 클래스명 {	
+	public abstract void abstMethod();
+	public abstract void testMethod();
+}
+
+// 자손 클래스
+public class 클래스명 extends 부모클래스명 {
+	@Override
+	public void abstMethod() {
+		(메서드 구현)
+	}
+
+	@Override
+	private void testMethod() { <- 접근제한자가 부모클래스와 달라 error!!
+		(메서드 구현)
+	}
+}
+
+</code></pre>
+#### interface
+> - interface 생성 시 public abstract가 생략 되어있음
+> - interface 상속받아 구현 시 반드시 public 사용해야 함
+<pre><code>
+// interface 클래스(부모 클래스)
+public interface 클래스명 {
+	(public abstract 생략) int div(int a, int b);
+	int sum(int a, int b);
+}
+
+// 자손 클래스
+public class 클래스명 implements 부모클래스명 {
+	@Override
+	public int div(int a, int b) {
+		return a / b;
+	}
+	// interface는 기본적으로 public abstract가 생략되어 있어 public 이 외의 접근제한자 사용 시 error
+	@Override
+	private int sum(int a, int b){
+		return a+ b;
+	}
+	
+}
+</code></pre>
+### String 관련 클래스
