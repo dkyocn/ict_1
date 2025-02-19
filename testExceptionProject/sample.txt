@@ -1,0 +1,4 @@
+파일  읽어들이기 테스트용 샘플 파일입니다.
+2025-02-19
+java.io.FileReader class used test!!
+File Reading test
