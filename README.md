@@ -420,3 +420,81 @@ public class 클래스명 implements 부모클래스명 {
 }
 </code></pre>
 ### String 관련 클래스
+> **String 클래스는 불변이다**
+- String 수정 시 새로운 주소를 할당함
+#### StringBuffer & StringBuilder
+> **StringBuffer**
+> - 문자열 내용 수정 가능
+> - 버퍼 이용 (기본 16문자 크기로 지정)
+> - thread safe 기능 제공 (성능저하요인)
+
+> **StringBuilder**
+> - 문자열 내용 수정 가능
+> - tread safe 기능 미제공
+#### StringTokenizer & split()
+- 둘다 특정 문자로 문자열을 분리하는 기능
+---
+## 17일차
+### 날짜 처리용 패키지
+- Date
+  - 시스템으로부터 현재 날짜, 시간 정보를 가져와서 기본 값으로 사용
+- Calendar & GregorianCalendar
+  - 년, 월, 일, 시, 분, 초 정보를 필드(멤버변수)를 이용하여, 각각 다룰 수 있음
+<pre><code>
+Calendar today = Calendar.getInstance(); // 생성자가 protected이므로 new 사용 못함
+Calendar today1 = new GregorianCalendar(); // GregorianCalendar는 Calendar의 후손 클래스임
+	
+// 아래와 같이 가용 가능
+int year = today1.get(Calendar.YEAR);
+int month = today1.get(Calendar.MONTH) + 1;
+</code></pre>
+- SimpleDateFormat
+  - Date 의 날짜, 시간 정보를 원하는 format 으로 출력을 원할 때 사용
+<pre><code>
+Date today = new Date();
+
+SimpleDateFormat ft = new SimpleDateFormat("yyyy-mm-dd");
+String ft_today = ft.format(today);
+	
+// 2025-02-19 출력됨
+</code></pre>
+### Error와 Exception
+- Error의 종류
+  - 시스템 에러
+    - 시스템 자체의 오작동 에러
+  - 컴파일 에러
+    - 보통 소스 코드 상 문법 오류
+  - 런타임 에러
+    - 실행 시 발생하는 에러
+- Exception
+  - 소스 코드 상 처리 가능한 에러
+  - throws와 try-catch문으로 처리 가능
+  - try-catch문으로 처리할 때 반드시 최상위 예외를 가장 마지막으로 catch 해야함
+<pre><code>
+// 방법. 1 -> thorws로 exception 넘김
+	public void testC() throws IOException {
+		FileWriter fileWriter = new FileWriter("sample.txt");
+	}
+	
+// 방법. 2 -> try-catch 문으로 exception 처리
+	try {
+		// 예외처리를 반드시 해야 되는  구문 : 생성자나 메서드 사용 구문들
+		FileReader fileReader = new FileReader("sample.txt");
+		
+		int ch;
+		while ((ch = fileReader.read()) != -1) {
+			System.out.printf((char)ch + "");
+		}
+		System.out.println();
+	} catch (FileNotFoundException e) { // 처리할 예외 클래스와 레퍼런스 변수 선언함
+		// 처리할 예외 클래스와 레퍼런스 변수 선언
+		System.out.println(e.getMessage());
+	} catch (IOException e) {
+		// read() 메서드 사용에 대한 예외 처리
+		e.printStackTrace(); // 에러 메세지와 에러 추적 정보가 출력
+	} catch (Exception e) {  // java.lang.Exception 이 예외클래스의 최상위 클래스임
+		e.printStackTrace();
+	} finally {
+		// 예외 발생 여부와 관계 없이 반드시 작동해야하는 구문 작성
+	}
+</code></pre>
