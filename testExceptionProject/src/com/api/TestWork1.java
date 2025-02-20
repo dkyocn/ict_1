@@ -5,6 +5,12 @@ import java.util.Calendar;
 public class TestWork1 {
 
 	public static void main(String[] a) {
+
+		int sum = 0;
+		String string = "asdf";
+		String str = string.substring(0);
+		str.charAt(sum + 1);
+
 		Calendar calendar = Calendar.getInstance();
 
 		int year = calendar.get(Calendar.YEAR);
@@ -43,5 +49,4 @@ public class TestWork1 {
 
 		System.out.println((1900 + year) + "년 " + month + "월 " + day + "일 " + week + "요일");
 	}
-
 }
