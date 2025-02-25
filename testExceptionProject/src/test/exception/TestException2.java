@@ -12,6 +12,11 @@ public class TestException2 {
 
 	}
 
+	/**
+	 * 예외 처리 구문 작동 순서 :
+	 * 1. 정상 구동 시 : try -> finally
+	 * 2. 예외 발생 시 : try -> catch -> finally
+	 */
 	public void fileRead() {
 		FileReader fileReader = null;
 
@@ -39,10 +44,13 @@ public class TestException2 {
 			e.printStackTrace();
 		} finally {
 			// 예외 발생 여부와 관계 없이 반드시 작동해야하는 구문 작성
+			System.out.println("finally 구동됨...");
 
 			// 읽기용 스트림은 반드시 반납해야 함
 			try {
-				fileReader.close();
+				if (fileReader != null) {
+					fileReader.close();
+				}
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

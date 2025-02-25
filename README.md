@@ -498,3 +498,7 @@ String ft_today = ft.format(today);
 		// 예외 발생 여부와 관계 없이 반드시 작동해야하는 구문 작성
 	}
 </code></pre>
+---
+## 18일
+### IOStream과 try-catch-finally/resource try-catch 구문
+---> 정리 필요
