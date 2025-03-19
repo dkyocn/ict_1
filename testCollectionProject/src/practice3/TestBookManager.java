@@ -1,6 +1,8 @@
-package practice2;
+package practice3;
 
-import java.util.*;
+import java.util.Scanner;
+
+import practice2.Book;
 
 public class TestBookManager {
 
@@ -9,12 +11,12 @@ public class TestBookManager {
 		menu();
 	}
 
-	public static void menu(){
-		BookManager bManager = new BookManager();
+	public static void menu() {
+		BookManagerMap bManager = new BookManagerMap();
 		Scanner sc = new Scanner(System.in);
 		int no;
-		
-		do{
+
+		do {
 			System.out.println("\n*** 도서 관리 프로그램 ***\n");
 			System.out.println("1. 새 도서 추가");
 			System.out.println("2. 도서정보 정렬후 출력");
@@ -24,18 +26,30 @@ public class TestBookManager {
 			System.out.println("6. 끝내기");
 			System.out.print("번호 선택 : ");
 			no = sc.nextInt();
-			
-			switch(no){
-			case 1:	bManager.addBook(inputBook());	break;
-			case 2:	bManager.printBookList(bManager.sortedBookList());	break;
-			case 3:	bManager.deleteBook(bManager.searchBook(inputBookTitle()));	break;
-			case 4:	bManager.printBook(bManager.searchBook(inputBookTitle()));	break;
-			case 5:	bManager.displayAll();	break;
-			case 6:	System.out.println("도서 관리 프로그램을 종료합니다...");
+
+			switch (no) {
+				case 1:
+					bManager.putBook(inputBook());
+					break;
+				case 2:
+					bManager.printBookMap(bManager.sortedBookMap());
+					break;
+				case 3:
+					bManager.removeBook(bManager.searchBook(inputBookTitle()));
+					break;
+				case 4:
+					bManager.printBook(bManager.searchBook(inputBookTitle()));
+					break;
+				case 5:
+					bManager.displayAll();
+					break;
+				case 6:
+					System.out.println("도서 관리 프로그램을 종료합니다...");
 					System.exit(0);
-			default:	System.out.println("잘못된 번호입니다. 다시 입력하십시오...");
+				default:
+					System.out.println("잘못된 번호입니다. 다시 입력하십시오...");
 			}
-		}while(no != 6);
+		} while (no != 6);
 
 	}
 
@@ -48,7 +62,7 @@ public class TestBookManager {
 	public static Book inputBook() {
 		//Book 객체의 필드값을 키보드로 입력받아 초기화하고 객체 리턴
 		Scanner sc = new Scanner(System.in);
-		
+
 		System.out.print("도서번호 : ");
 		String no = sc.next();
 		System.out.print("도서분류코드(1.인문/2.자연과학/3.의료/4.기타) 번호 : ");
@@ -58,7 +72,7 @@ public class TestBookManager {
 		String title = sc.nextLine();
 		System.out.print("저자 : ");
 		String author = sc.next();
-		
+
 		return new Book(no, category, title, author);
 	}
 
