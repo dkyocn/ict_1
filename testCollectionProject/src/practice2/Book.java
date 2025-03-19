@@ -1,7 +1,10 @@
 package practice2;
 
-public class Book {
+import java.io.Serializable;
 
+public class Book implements Serializable {
+
+	private static final long serialVersionUID = 6264345931164349162L;
 	private String bNO;
 	private int category;
 	private String title;
