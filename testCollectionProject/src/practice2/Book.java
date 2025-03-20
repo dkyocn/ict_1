@@ -1,33 +1,28 @@
 package practice2;
 
-import java.io.Serializable;
+public class Book implements java.io.Serializable{
+	//Field
+	private String bNo;	//도서번호
+	private int category;   //도서분류코드(1.인문/2.자연과학/3.의료/4.기타)
+	private String  title;	//책제목
+	private String  author;	//저자
+	
+	public Book(){}
 
-public class Book implements Serializable {
-
-	private static final long serialVersionUID = 6264345931164349162L;
-	private String bNO;
-	private int category;
-	private String title;
-	private String author;
-
-	public Book() {
+	public Book(String bNo, int category, String title, String author) {
 		super();
-	}
-
-	public Book(String bNO, int category, String title, String author) {
-		super();
-		this.bNO = bNO;
+		this.bNo = bNo;
 		this.category = category;
 		this.title = title;
 		this.author = author;
 	}
 
-	public String getbNO() {
-		return bNO;
+	public String getbNo() {
+		return bNo;
 	}
 
-	public void setbNO(String bNO) {
-		this.bNO = bNO;
+	public void setbNo(String bNo) {
+		this.bNo = bNo;
 	}
 
 	public int getCategory() {
@@ -53,10 +48,12 @@ public class Book implements Serializable {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
-
+	
 	@Override
-	public String toString() {
-		return "Book [bNO=" + bNO + ", category=" + category + ", title=" + title + ", author=" + author + "]";
+	public String toString(){
+		return bNo + ", " + (category == 1? "인문":
+							(category == 2? "자연과학" : 
+								(category == 3? "의료" : "기타"))) 
+				+ "계열, " + title + ", " + author; 
 	}
-
 }
