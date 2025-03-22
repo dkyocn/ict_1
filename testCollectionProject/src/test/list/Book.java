@@ -43,4 +43,14 @@ public class Book implements Serializable {
 	public String toString() {
 		return "Book [title=" + title + ", price=" + price + "]";
 	}
+
+	@Override
+	public Object clone() {
+		// Shallow copy
+		//		return this; // this가 받은 주소를 리턴
+
+		// Deep copy : 새 객체를 new 하고, this가 참조하고 있는 객체의 필드값을 복사함
+		return new Book(this.title, this.price);
+
+	}
 }
